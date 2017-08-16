@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28CF38400026F35E4C94B235 /* Pods_Shop_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF08530DA83ED53C96BDB0A /* Pods_Shop_Buddy.framework */; };
+		6B6C930F7ED816AEFD3C8088 /* Pods_Shop_BuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49D15839E893033D9078001 /* Pods_Shop_BuddyTests.framework */; };
+		DF0B5C8E1F4034FA0063479D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0B5C8D1F4034FA0063479D /* AdSupport.framework */; };
+		DF0B5C901F4057140063479D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B5C8F1F4057140063479D /* AboutViewController.swift */; };
+		DF1D05041F40F8D600F9E6AA /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1D05021F40F8D600F9E6AA /* ContactInfoTableViewCell.swift */; };
+		DF1D05051F40F8D600F9E6AA /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1D05031F40F8D600F9E6AA /* ContactInfoTableViewCell.xib */; };
+		DF28EAEF1F41574C0057101D /* LocationPickerTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28EAEE1F41574C0057101D /* LocationPickerTableManager.swift */; };
+		DF28EAF21F416C3A0057101D /* LocationPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28EAF01F416C3A0057101D /* LocationPickerCell.swift */; };
+		DF28EAF31F416C3A0057101D /* LocationPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF28EAF11F416C3A0057101D /* LocationPickerCell.xib */; };
+		DF3DA5E81F413611002CB74A /* FoursquareApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3DA5E71F413611002CB74A /* FoursquareApi.swift */; };
+		DF3DA5ED1F413653002CB74A /* VenueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3DA5EC1F413653002CB74A /* VenueRequest.swift */; };
+		DF3DA5EF1F413A87002CB74A /* FoursquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3DA5EE1F413A87002CB74A /* FoursquareRequest.swift */; };
+		DF3DA5F11F4140F1002CB74A /* FoursquareVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3DA5F01F4140F1002CB74A /* FoursquareVenue.swift */; };
+		DF3DA5F31F41447B002CB74A /* VenueSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3DA5F21F41447B002CB74A /* VenueSearchResponse.swift */; };
+		DF4225F51F3EEE010053E6BF /* ProductLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4225F41F3EEE010053E6BF /* ProductLookupService.swift */; };
+		DF4225F71F3EEEBF0053E6BF /* UpcLookupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4225F61F3EEEBE0053E6BF /* UpcLookupRequest.swift */; };
+		DF4225FD1F3EF2070053E6BF /* String+SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4225FC1F3EF2070053E6BF /* String+SHA1.swift */; };
+		DF4E4E831F3EC3FB00EEEB15 /* ShoppingSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E4E821F3EC3FB00EEEB15 /* ShoppingSessionService.swift */; };
+		DF4E4E851F3ECF8400EEEB15 /* StringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E4E841F3ECF8400EEEB15 /* StringParser.swift */; };
+		DF54A9451F3EABCC00905C51 /* BuddyFormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF54A9441F3EABCC00905C51 /* BuddyFormTextField.swift */; };
+		DF6C46721F3E8DE5008F7F29 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C46711F3E8DE5008F7F29 /* Product.swift */; };
+		DF6C46751F3E9797008F7F29 /* BuddySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C46741F3E9797008F7F29 /* BuddySettings.swift */; };
+		DF6C46781F3E97CE008F7F29 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C46771F3E97CE008F7F29 /* UIColor+Palette.swift */; };
+		DF6C467A1F3E98C9008F7F29 /* ShoppingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C46791F3E98C9008F7F29 /* ShoppingSession.swift */; };
+		DF6C467E1F3E994E008F7F29 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6C467D1F3E994E008F7F29 /* ShoppingItem.swift */; };
+		DF7B2C831F40326B009CE405 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7B2C821F40326B009CE405 /* iAd.framework */; };
+		DF8518EF1F3EFD7F00F85541 /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8518EE1F3EFD7F00F85541 /* NSString+SHA1.m */; };
+		DF8518F11F3F079400F85541 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8518F01F3F079400F85541 /* StorageService.swift */; };
+		DF8518F31F3FA37800F85541 /* UIButton+CentredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8518F21F3FA37800F85541 /* UIButton+CentredImage.swift */; };
+		DF8B3AA51F3FE55800A52643 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3AA41F3FE55800A52643 /* HistoryListViewController.swift */; };
+		DF8B3AA71F3FE58000A52643 /* HistoricalSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3AA61F3FE58000A52643 /* HistoricalSessionViewController.swift */; };
+		DF8B3AA91F3FEE0900A52643 /* SavedSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3AA81F3FEE0900A52643 /* SavedSessionTableViewCell.swift */; };
+		DF8B3AAB1F3FF10D00A52643 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3AAA1F3FF10D00A52643 /* DateHelper.swift */; };
+		DF9281BC1F42E5B2000F0FB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9281BB1F42CB0B000F0FB8 /* GoogleService-Info.plist */; };
+		DFC1881F1F3EA03F006934B2 /* ShoppingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1881E1F3EA03F006934B2 /* ShoppingItemCell.swift */; };
+		DFC188211F3EA0DB006934B2 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC188201F3EA0DB006934B2 /* CurrencyHelper.swift */; };
+		DFC188231F3EA97C006934B2 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC188221F3EA97C006934B2 /* AddItemViewController.swift */; };
+		DFD307821F4177D2008BD671 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD307811F4177D2008BD671 /* ReachabilityService.swift */; };
+		DFDBC2C51F3E8A2500B44469 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDBC2C41F3E8A2500B44469 /* AppDelegate.swift */; };
+		DFDBC2C71F3E8A2500B44469 /* BuddyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDBC2C61F3E8A2500B44469 /* BuddyListViewController.swift */; };
+		DFDBC2CA1F3E8A2500B44469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDBC2C81F3E8A2500B44469 /* Main.storyboard */; };
+		DFDBC2CC1F3E8A2500B44469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDBC2CB1F3E8A2500B44469 /* Assets.xcassets */; };
+		DFDBC2CF1F3E8A2500B44469 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDBC2CD1F3E8A2500B44469 /* LaunchScreen.storyboard */; };
+		DFDBC2DA1F3E8A2500B44469 /* Shop_BuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDBC2D91F3E8A2500B44469 /* Shop_BuddyTests.swift */; };
+		DFEEDF231F410951002ABFCC /* UIImage+Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEEDF221F410951002ABFCC /* UIImage+Colour.swift */; };
+		DFEEDF261F410D8D002ABFCC /* ColourPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEEDF241F410D8D002ABFCC /* ColourPickerTableViewCell.swift */; };
+		DFEEDF271F410D8D002ABFCC /* ColourPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEEDF251F410D8D002ABFCC /* ColourPickerTableViewCell.xib */; };
+		DFEEDF291F410E6D002ABFCC /* ColourSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEEDF281F410E6D002ABFCC /* ColourSelectionButton.swift */; };
+		DFEEDF2B1F411BCF002ABFCC /* UITable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEEDF2A1F411BCF002ABFCC /* UITable+Extensions.swift */; };
+		DFEEDF2D1F412868002ABFCC /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEEDF2C1F412868002ABFCC /* PlacesService.swift */; };
+		DFF149051F4188A300C51D3D /* InAppPurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF149041F4188A300C51D3D /* InAppPurchaseService.swift */; };
+		DFF149071F41936F00C51D3D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF149061F41936F00C51D3D /* StoreKit.framework */; };
+		DFF1490A1F41965700C51D3D /* InAppPurchaseDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF149081F41965700C51D3D /* InAppPurchaseDescriptionCell.swift */; };
+		DFF1490B1F41965700C51D3D /* InAppPurchaseDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF149091F41965700C51D3D /* InAppPurchaseDescriptionCell.xib */; };
+		DFF1490E1F41979600C51D3D /* InAppPurchaseActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF1490C1F41979600C51D3D /* InAppPurchaseActionCell.swift */; };
+		DFF1490F1F41979600C51D3D /* InAppPurchaseActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF1490D1F41979600C51D3D /* InAppPurchaseActionCell.xib */; };
+		DFF149121F41A20700C51D3D /* InAppPurchaseProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF149111F41A20700C51D3D /* InAppPurchaseProduct.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFDBC2D61F3E8A2500B44469 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFDBC2B91F3E8A2500B44469 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFDBC2C01F3E8A2500B44469;
+			remoteInfo = "Shop Buddy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C329A4E2E218ED2F1E5A69A /* Pods-Shop BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop BuddyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop BuddyTests/Pods-Shop BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B9986B293314A3561810224 /* Pods-Shop Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop Buddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		74DE05C00392A97E2154AF43 /* Pods-Shop BuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop BuddyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shop BuddyTests/Pods-Shop BuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B51C46D42F5ED90D61E47F71 /* Pods-Shop Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shop Buddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		C49D15839E893033D9078001 /* Pods_Shop_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop_BuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0B5C8D1F4034FA0063479D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		DF0B5C8F1F4057140063479D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		DF1D05021F40F8D600F9E6AA /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DF1D05031F40F8D600F9E6AA /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
+		DF28EAEE1F41574C0057101D /* LocationPickerTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerTableManager.swift; sourceTree = "<group>"; };
+		DF28EAF01F416C3A0057101D /* LocationPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerCell.swift; sourceTree = "<group>"; };
+		DF28EAF11F416C3A0057101D /* LocationPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPickerCell.xib; sourceTree = "<group>"; };
+		DF3DA5E71F413611002CB74A /* FoursquareApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApi.swift; sourceTree = "<group>"; };
+		DF3DA5EC1F413653002CB74A /* VenueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueRequest.swift; sourceTree = "<group>"; };
+		DF3DA5EE1F413A87002CB74A /* FoursquareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareRequest.swift; sourceTree = "<group>"; };
+		DF3DA5F01F4140F1002CB74A /* FoursquareVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareVenue.swift; sourceTree = "<group>"; };
+		DF3DA5F21F41447B002CB74A /* VenueSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSearchResponse.swift; sourceTree = "<group>"; };
+		DF4225F41F3EEE010053E6BF /* ProductLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLookupService.swift; sourceTree = "<group>"; };
+		DF4225F61F3EEEBE0053E6BF /* UpcLookupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcLookupRequest.swift; sourceTree = "<group>"; };
+		DF4225F81F3EF1E90053E6BF /* Shop Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shop Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF4225FC1F3EF2070053E6BF /* String+SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SHA1.swift"; sourceTree = "<group>"; };
+		DF4E4E821F3EC3FB00EEEB15 /* ShoppingSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSessionService.swift; sourceTree = "<group>"; };
+		DF4E4E841F3ECF8400EEEB15 /* StringParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringParser.swift; sourceTree = "<group>"; };
+		DF54A9441F3EABCC00905C51 /* BuddyFormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuddyFormTextField.swift; sourceTree = "<group>"; };
+		DF6C46711F3E8DE5008F7F29 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DF6C46741F3E9797008F7F29 /* BuddySettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddySettings.swift; sourceTree = "<group>"; };
+		DF6C46771F3E97CE008F7F29 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		DF6C46791F3E98C9008F7F29 /* ShoppingSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingSession.swift; sourceTree = "<group>"; };
+		DF6C467D1F3E994E008F7F29 /* ShoppingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		DF7B2C821F40326B009CE405 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		DF8518ED1F3EFD7E00F85541 /* NSString+SHA1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA1.h"; sourceTree = "<group>"; };
+		DF8518EE1F3EFD7F00F85541 /* NSString+SHA1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA1.m"; sourceTree = "<group>"; };
+		DF8518F01F3F079400F85541 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		DF8518F21F3FA37800F85541 /* UIButton+CentredImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CentredImage.swift"; sourceTree = "<group>"; };
+		DF8B3AA41F3FE55800A52643 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
+		DF8B3AA61F3FE58000A52643 /* HistoricalSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalSessionViewController.swift; sourceTree = "<group>"; };
+		DF8B3AA81F3FEE0900A52643 /* SavedSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSessionTableViewCell.swift; sourceTree = "<group>"; };
+		DF8B3AAA1F3FF10D00A52643 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		DF9281BB1F42CB0B000F0FB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFC1881E1F3EA03F006934B2 /* ShoppingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCell.swift; sourceTree = "<group>"; };
+		DFC188201F3EA0DB006934B2 /* CurrencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyHelper.swift; sourceTree = "<group>"; };
+		DFC188221F3EA97C006934B2 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		DFD307811F4177D2008BD671 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		DFDBC2C11F3E8A2500B44469 /* Shop Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shop Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFDBC2C41F3E8A2500B44469 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFDBC2C61F3E8A2500B44469 /* BuddyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BuddyListViewController.swift; path = ../BuddyListViewController.swift; sourceTree = "<group>"; };
+		DFDBC2C91F3E8A2500B44469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFDBC2CB1F3E8A2500B44469 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFDBC2CE1F3E8A2500B44469 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DFDBC2D01F3E8A2500B44469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFDBC2D51F3E8A2500B44469 /* Shop BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shop BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFDBC2D91F3E8A2500B44469 /* Shop_BuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_BuddyTests.swift; sourceTree = "<group>"; };
+		DFDBC2DB1F3E8A2500B44469 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEEDF221F410951002ABFCC /* UIImage+Colour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Colour.swift"; sourceTree = "<group>"; };
+		DFEEDF241F410D8D002ABFCC /* ColourPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourPickerTableViewCell.swift; sourceTree = "<group>"; };
+		DFEEDF251F410D8D002ABFCC /* ColourPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColourPickerTableViewCell.xib; sourceTree = "<group>"; };
+		DFEEDF281F410E6D002ABFCC /* ColourSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourSelectionButton.swift; sourceTree = "<group>"; };
+		DFEEDF2A1F411BCF002ABFCC /* UITable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITable+Extensions.swift"; sourceTree = "<group>"; };
+		DFEEDF2C1F412868002ABFCC /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		DFF149041F4188A300C51D3D /* InAppPurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseService.swift; sourceTree = "<group>"; };
+		DFF149061F41936F00C51D3D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DFF149081F41965700C51D3D /* InAppPurchaseDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseDescriptionCell.swift; sourceTree = "<group>"; };
+		DFF149091F41965700C51D3D /* InAppPurchaseDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InAppPurchaseDescriptionCell.xib; sourceTree = "<group>"; };
+		DFF1490C1F41979600C51D3D /* InAppPurchaseActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseActionCell.swift; sourceTree = "<group>"; };
+		DFF1490D1F41979600C51D3D /* InAppPurchaseActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InAppPurchaseActionCell.xib; sourceTree = "<group>"; };
+		DFF149111F41A20700C51D3D /* InAppPurchaseProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseProduct.swift; sourceTree = "<group>"; };
+		FFF08530DA83ED53C96BDB0A /* Pods_Shop_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shop_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFDBC2BE1F3E8A2500B44469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0B5C8E1F4034FA0063479D /* AdSupport.framework in Frameworks */,
+				DF7B2C831F40326B009CE405 /* iAd.framework in Frameworks */,
+				28CF38400026F35E4C94B235 /* Pods_Shop_Buddy.framework in Frameworks */,
+				DFF149071F41936F00C51D3D /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDBC2D21F3E8A2500B44469 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B6C930F7ED816AEFD3C8088 /* Pods_Shop_BuddyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC377D22583514CBE460E59C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF149061F41936F00C51D3D /* StoreKit.framework */,
+				DF0B5C8D1F4034FA0063479D /* AdSupport.framework */,
+				DF7B2C821F40326B009CE405 /* iAd.framework */,
+				FFF08530DA83ED53C96BDB0A /* Pods_Shop_Buddy.framework */,
+				C49D15839E893033D9078001 /* Pods_Shop_BuddyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D65F96322EEF562C919C5602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B51C46D42F5ED90D61E47F71 /* Pods-Shop Buddy.debug.xcconfig */,
+				2B9986B293314A3561810224 /* Pods-Shop Buddy.release.xcconfig */,
+				74DE05C00392A97E2154AF43 /* Pods-Shop BuddyTests.debug.xcconfig */,
+				1C329A4E2E218ED2F1E5A69A /* Pods-Shop BuddyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF1D04FE1F40F6F900F9E6AA /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				DFC1881E1F3EA03F006934B2 /* ShoppingItemCell.swift */,
+				DF8B3AA81F3FEE0900A52643 /* SavedSessionTableViewCell.swift */,
+				DF1D05021F40F8D600F9E6AA /* ContactInfoTableViewCell.swift */,
+				DF1D05031F40F8D600F9E6AA /* ContactInfoTableViewCell.xib */,
+				DFEEDF241F410D8D002ABFCC /* ColourPickerTableViewCell.swift */,
+				DFEEDF251F410D8D002ABFCC /* ColourPickerTableViewCell.xib */,
+				DF28EAF01F416C3A0057101D /* LocationPickerCell.swift */,
+				DF28EAF11F416C3A0057101D /* LocationPickerCell.xib */,
+				DFF149081F41965700C51D3D /* InAppPurchaseDescriptionCell.swift */,
+				DFF149091F41965700C51D3D /* InAppPurchaseDescriptionCell.xib */,
+				DFF1490C1F41979600C51D3D /* InAppPurchaseActionCell.swift */,
+				DFF1490D1F41979600C51D3D /* InAppPurchaseActionCell.xib */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		DF1D04FF1F40F70500F9E6AA /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				DF8518F21F3FA37800F85541 /* UIButton+CentredImage.swift */,
+				DF54A9441F3EABCC00905C51 /* BuddyFormTextField.swift */,
+				DFEEDF281F410E6D002ABFCC /* ColourSelectionButton.swift */,
+				DF28EAEE1F41574C0057101D /* LocationPickerTableManager.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		DF3DA5E91F413615002CB74A /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				DF3DA5EA1F413621002CB74A /* Foursquare */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		DF3DA5EA1F413621002CB74A /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				DF3DA5E71F413611002CB74A /* FoursquareApi.swift */,
+				DF3DA5EB1F413627002CB74A /* Models */,
+			);
+			path = Foursquare;
+			sourceTree = "<group>";
+		};
+		DF3DA5EB1F413627002CB74A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF3DA5EC1F413653002CB74A /* VenueRequest.swift */,
+				DF3DA5F21F41447B002CB74A /* VenueSearchResponse.swift */,
+				DF3DA5EE1F413A87002CB74A /* FoursquareRequest.swift */,
+				DF3DA5F01F4140F1002CB74A /* FoursquareVenue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF4225F31F3EEDEC0053E6BF /* Product Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				DF4225F41F3EEE010053E6BF /* ProductLookupService.swift */,
+				DF4225F61F3EEEBE0053E6BF /* UpcLookupRequest.swift */,
+			);
+			path = "Product Lookup";
+			sourceTree = "<group>";
+		};
+		DF4E4E811F3EC3E800EEEB15 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DF3DA5E91F413615002CB74A /* APIs */,
+				DF8518ED1F3EFD7E00F85541 /* NSString+SHA1.h */,
+				DF8518EE1F3EFD7F00F85541 /* NSString+SHA1.m */,
+				DF4E4E821F3EC3FB00EEEB15 /* ShoppingSessionService.swift */,
+				DF8518F01F3F079400F85541 /* StorageService.swift */,
+				DFEEDF2C1F412868002ABFCC /* PlacesService.swift */,
+				DFD307811F4177D2008BD671 /* ReachabilityService.swift */,
+				DFF149041F4188A300C51D3D /* InAppPurchaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DF6C466F1F3E8DB5008F7F29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF6C46711F3E8DE5008F7F29 /* Product.swift */,
+				DF6C46791F3E98C9008F7F29 /* ShoppingSession.swift */,
+				DF6C467D1F3E994E008F7F29 /* ShoppingItem.swift */,
+				DFF149111F41A20700C51D3D /* InAppPurchaseProduct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF6C46701F3E8DBA008F7F29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF1D04FF1F40F70500F9E6AA /* View Components */,
+				DF1D04FE1F40F6F900F9E6AA /* TableCells */,
+				DFDBC2C61F3E8A2500B44469 /* BuddyListViewController.swift */,
+				DFC188221F3EA97C006934B2 /* AddItemViewController.swift */,
+				DF8B3AA41F3FE55800A52643 /* HistoryListViewController.swift */,
+				DF8B3AA61F3FE58000A52643 /* HistoricalSessionViewController.swift */,
+				DF0B5C8F1F4057140063479D /* AboutViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF6C46731F3E96A7008F7F29 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DF6C46741F3E9797008F7F29 /* BuddySettings.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DF6C46761F3E97C1008F7F29 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF6C46771F3E97CE008F7F29 /* UIColor+Palette.swift */,
+				DFC188201F3EA0DB006934B2 /* CurrencyHelper.swift */,
+				DF4E4E841F3ECF8400EEEB15 /* StringParser.swift */,
+				DF4225FC1F3EF2070053E6BF /* String+SHA1.swift */,
+				DF8B3AAA1F3FF10D00A52643 /* DateHelper.swift */,
+				DFEEDF221F410951002ABFCC /* UIImage+Colour.swift */,
+				DFEEDF2A1F411BCF002ABFCC /* UITable+Extensions.swift */,
+			);
+			name = "Helpers and Extensions";
+			sourceTree = "<group>";
+		};
+		DFDBC2B81F3E8A2500B44469 = {
+			isa = PBXGroup;
+			children = (
+				DFDBC2C31F3E8A2500B44469 /* Shop Buddy */,
+				DFDBC2D81F3E8A2500B44469 /* Shop BuddyTests */,
+				DFDBC2C21F3E8A2500B44469 /* Products */,
+				D65F96322EEF562C919C5602 /* Pods */,
+				AC377D22583514CBE460E59C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DFDBC2C21F3E8A2500B44469 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFDBC2C11F3E8A2500B44469 /* Shop Buddy.app */,
+				DFDBC2D51F3E8A2500B44469 /* Shop BuddyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFDBC2C31F3E8A2500B44469 /* Shop Buddy */ = {
+			isa = PBXGroup;
+			children = (
+				DF4225F31F3EEDEC0053E6BF /* Product Lookup */,
+				DF4E4E811F3EC3E800EEEB15 /* Services */,
+				DF6C46761F3E97C1008F7F29 /* Helpers and Extensions */,
+				DF6C46731F3E96A7008F7F29 /* Core */,
+				DF6C46701F3E8DBA008F7F29 /* Views */,
+				DF6C466F1F3E8DB5008F7F29 /* Models */,
+				DFDBC2C41F3E8A2500B44469 /* AppDelegate.swift */,
+				DFDBC2C81F3E8A2500B44469 /* Main.storyboard */,
+				DFDBC2CB1F3E8A2500B44469 /* Assets.xcassets */,
+				DFDBC2CD1F3E8A2500B44469 /* LaunchScreen.storyboard */,
+				DFDBC2D01F3E8A2500B44469 /* Info.plist */,
+				DF9281BB1F42CB0B000F0FB8 /* GoogleService-Info.plist */,
+				DF4225F81F3EF1E90053E6BF /* Shop Buddy-Bridging-Header.h */,
+			);
+			path = "Shop Buddy";
+			sourceTree = "<group>";
+		};
+		DFDBC2D81F3E8A2500B44469 /* Shop BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFDBC2D91F3E8A2500B44469 /* Shop_BuddyTests.swift */,
+				DFDBC2DB1F3E8A2500B44469 /* Info.plist */,
+			);
+			path = "Shop BuddyTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFDBC2C01F3E8A2500B44469 /* Shop Buddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFDBC2DE1F3E8A2500B44469 /* Build configuration list for PBXNativeTarget "Shop Buddy" */;
+			buildPhases = (
+				3001204595BEE204BA939C2F /* [CP] Check Pods Manifest.lock */,
+				DFDBC2BD1F3E8A2500B44469 /* Sources */,
+				DFDBC2BE1F3E8A2500B44469 /* Frameworks */,
+				DFDBC2BF1F3E8A2500B44469 /* Resources */,
+				D51A194DA1739EB100838DFB /* [CP] Embed Pods Frameworks */,
+				22EC4135670041451F48F220 /* [CP] Copy Pods Resources */,
+				DF7B2C811F402CB9009CE405 /* Upload Symbols to Crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shop Buddy";
+			productName = "Shop Buddy";
+			productReference = DFDBC2C11F3E8A2500B44469 /* Shop Buddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFDBC2D41F3E8A2500B44469 /* Shop BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFDBC2E11F3E8A2500B44469 /* Build configuration list for PBXNativeTarget "Shop BuddyTests" */;
+			buildPhases = (
+				99AE7AE1F65F499B3CE70F4A /* [CP] Check Pods Manifest.lock */,
+				DFDBC2D11F3E8A2500B44469 /* Sources */,
+				DFDBC2D21F3E8A2500B44469 /* Frameworks */,
+				DFDBC2D31F3E8A2500B44469 /* Resources */,
+				E9346D8FD983EB8C42444599 /* [CP] Embed Pods Frameworks */,
+				425668BDE2817348C8CFD919 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFDBC2D71F3E8A2500B44469 /* PBXTargetDependency */,
+			);
+			name = "Shop BuddyTests";
+			productName = "Shop BuddyTests";
+			productReference = DFDBC2D51F3E8A2500B44469 /* Shop BuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFDBC2B91F3E8A2500B44469 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Luke Harries";
+				TargetAttributes = {
+					DFDBC2C01F3E8A2500B44469 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SW5R2X8WU2;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					DFDBC2D41F3E8A2500B44469 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DFDBC2C01F3E8A2500B44469;
+					};
+				};
+			};
+			buildConfigurationList = DFDBC2BC1F3E8A2500B44469 /* Build configuration list for PBXProject "Shop Buddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFDBC2B81F3E8A2500B44469;
+			productRefGroup = DFDBC2C21F3E8A2500B44469 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFDBC2C01F3E8A2500B44469 /* Shop Buddy */,
+				DFDBC2D41F3E8A2500B44469 /* Shop BuddyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFDBC2BF1F3E8A2500B44469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF1D05051F40F8D600F9E6AA /* ContactInfoTableViewCell.xib in Resources */,
+				DFF1490B1F41965700C51D3D /* InAppPurchaseDescriptionCell.xib in Resources */,
+				DF9281BC1F42E5B2000F0FB8 /* GoogleService-Info.plist in Resources */,
+				DF28EAF31F416C3A0057101D /* LocationPickerCell.xib in Resources */,
+				DFDBC2CF1F3E8A2500B44469 /* LaunchScreen.storyboard in Resources */,
+				DFF1490F1F41979600C51D3D /* InAppPurchaseActionCell.xib in Resources */,
+				DFDBC2CC1F3E8A2500B44469 /* Assets.xcassets in Resources */,
+				DFDBC2CA1F3E8A2500B44469 /* Main.storyboard in Resources */,
+				DFEEDF271F410D8D002ABFCC /* ColourPickerTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDBC2D31F3E8A2500B44469 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22EC4135670041451F48F220 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3001204595BEE204BA939C2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shop Buddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		425668BDE2817348C8CFD919 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop BuddyTests/Pods-Shop BuddyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AE7AE1F65F499B3CE70F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shop BuddyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D51A194DA1739EB100838DFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONCodable/JSONCodable.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/QuadratTouch/QuadratTouch.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONCodable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuadratTouch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop Buddy/Pods-Shop Buddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF7B2C811F402CB9009CE405 /* Upload Symbols to Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Upload Symbols to Crashlytics";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 029df708ccfab20ce9cb6ad9411e7de1da6e4da3 63e05593f1f7208f8a436b5212022798c4d280923d236141bf7736131efdbdc8";
+		};
+		E9346D8FD983EB8C42444599 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shop BuddyTests/Pods-Shop BuddyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFDBC2BD1F3E8A2500B44469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3DA5F31F41447B002CB74A /* VenueSearchResponse.swift in Sources */,
+				DFF149121F41A20700C51D3D /* InAppPurchaseProduct.swift in Sources */,
+				DF4E4E831F3EC3FB00EEEB15 /* ShoppingSessionService.swift in Sources */,
+				DF28EAEF1F41574C0057101D /* LocationPickerTableManager.swift in Sources */,
+				DF8518F11F3F079400F85541 /* StorageService.swift in Sources */,
+				DF28EAF21F416C3A0057101D /* LocationPickerCell.swift in Sources */,
+				DFC1881F1F3EA03F006934B2 /* ShoppingItemCell.swift in Sources */,
+				DF4E4E851F3ECF8400EEEB15 /* StringParser.swift in Sources */,
+				DF8B3AA71F3FE58000A52643 /* HistoricalSessionViewController.swift in Sources */,
+				DFDBC2C71F3E8A2500B44469 /* BuddyListViewController.swift in Sources */,
+				DF3DA5EF1F413A87002CB74A /* FoursquareRequest.swift in Sources */,
+				DFDBC2C51F3E8A2500B44469 /* AppDelegate.swift in Sources */,
+				DF3DA5ED1F413653002CB74A /* VenueRequest.swift in Sources */,
+				DFD307821F4177D2008BD671 /* ReachabilityService.swift in Sources */,
+				DF54A9451F3EABCC00905C51 /* BuddyFormTextField.swift in Sources */,
+				DF6C46721F3E8DE5008F7F29 /* Product.swift in Sources */,
+				DF8518EF1F3EFD7F00F85541 /* NSString+SHA1.m in Sources */,
+				DFEEDF2B1F411BCF002ABFCC /* UITable+Extensions.swift in Sources */,
+				DFC188211F3EA0DB006934B2 /* CurrencyHelper.swift in Sources */,
+				DFEEDF261F410D8D002ABFCC /* ColourPickerTableViewCell.swift in Sources */,
+				DFC188231F3EA97C006934B2 /* AddItemViewController.swift in Sources */,
+				DF3DA5F11F4140F1002CB74A /* FoursquareVenue.swift in Sources */,
+				DFF1490A1F41965700C51D3D /* InAppPurchaseDescriptionCell.swift in Sources */,
+				DF8B3AA91F3FEE0900A52643 /* SavedSessionTableViewCell.swift in Sources */,
+				DF8B3AA51F3FE55800A52643 /* HistoryListViewController.swift in Sources */,
+				DFEEDF231F410951002ABFCC /* UIImage+Colour.swift in Sources */,
+				DF6C46751F3E9797008F7F29 /* BuddySettings.swift in Sources */,
+				DF6C467E1F3E994E008F7F29 /* ShoppingItem.swift in Sources */,
+				DF4225FD1F3EF2070053E6BF /* String+SHA1.swift in Sources */,
+				DFEEDF2D1F412868002ABFCC /* PlacesService.swift in Sources */,
+				DF3DA5E81F413611002CB74A /* FoursquareApi.swift in Sources */,
+				DF4225F51F3EEE010053E6BF /* ProductLookupService.swift in Sources */,
+				DF0B5C901F4057140063479D /* AboutViewController.swift in Sources */,
+				DFF1490E1F41979600C51D3D /* InAppPurchaseActionCell.swift in Sources */,
+				DF6C467A1F3E98C9008F7F29 /* ShoppingSession.swift in Sources */,
+				DF4225F71F3EEEBF0053E6BF /* UpcLookupRequest.swift in Sources */,
+				DF6C46781F3E97CE008F7F29 /* UIColor+Palette.swift in Sources */,
+				DF1D05041F40F8D600F9E6AA /* ContactInfoTableViewCell.swift in Sources */,
+				DF8B3AAB1F3FF10D00A52643 /* DateHelper.swift in Sources */,
+				DFF149051F4188A300C51D3D /* InAppPurchaseService.swift in Sources */,
+				DFEEDF291F410E6D002ABFCC /* ColourSelectionButton.swift in Sources */,
+				DF8518F31F3FA37800F85541 /* UIButton+CentredImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFDBC2D11F3E8A2500B44469 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFDBC2DA1F3E8A2500B44469 /* Shop_BuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFDBC2D71F3E8A2500B44469 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFDBC2C01F3E8A2500B44469 /* Shop Buddy */;
+			targetProxy = DFDBC2D61F3E8A2500B44469 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFDBC2C81F3E8A2500B44469 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFDBC2C91F3E8A2500B44469 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFDBC2CD1F3E8A2500B44469 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFDBC2CE1F3E8A2500B44469 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFDBC2DC1F3E8A2500B44469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFDBC2DD1F3E8A2500B44469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFDBC2DF1F3E8A2500B44469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51C46D42F5ED90D61E47F71 /* Pods-Shop Buddy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SW5R2X8WU2;
+				INFOPLIST_FILE = "Shop Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.lukeharries.shopbuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shop Buddy/Shop Buddy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DFDBC2E01F3E8A2500B44469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B9986B293314A3561810224 /* Pods-Shop Buddy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SW5R2X8WU2;
+				INFOPLIST_FILE = "Shop Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.lukeharries.shopbuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos10.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shop Buddy/Shop Buddy-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DFDBC2E21F3E8A2500B44469 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74DE05C00392A97E2154AF43 /* Pods-Shop BuddyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Shop BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nz.co.lukeharries.Shop-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shop Buddy.app/Shop Buddy";
+			};
+			name = Debug;
+		};
+		DFDBC2E31F3E8A2500B44469 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C329A4E2E218ED2F1E5A69A /* Pods-Shop BuddyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Shop BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "nz.co.lukeharries.Shop-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shop Buddy.app/Shop Buddy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFDBC2BC1F3E8A2500B44469 /* Build configuration list for PBXProject "Shop Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDBC2DC1F3E8A2500B44469 /* Debug */,
+				DFDBC2DD1F3E8A2500B44469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFDBC2DE1F3E8A2500B44469 /* Build configuration list for PBXNativeTarget "Shop Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDBC2DF1F3E8A2500B44469 /* Debug */,
+				DFDBC2E01F3E8A2500B44469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFDBC2E11F3E8A2500B44469 /* Build configuration list for PBXNativeTarget "Shop BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDBC2E21F3E8A2500B44469 /* Debug */,
+				DFDBC2E31F3E8A2500B44469 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFDBC2B91F3E8A2500B44469 /* Project object */;
+}

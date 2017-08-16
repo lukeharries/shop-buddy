@@ -1,0 +1,6 @@
+framework module Pods_Shop_BuddyTests {
+  umbrella header "Pods-Shop BuddyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
