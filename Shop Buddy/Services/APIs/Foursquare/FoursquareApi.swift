@@ -30,17 +30,40 @@ class FoursquareApi {
         let parameters : Parameters = request.requestParameters()
         
         return Promise<[FoursquareVenue]> { fulfill, reject in
-            Alamofire.request(requestUrl, method: .get, parameters: parameters, encoding: URLEncoding.queryString, headers: nil).responseObject { (response: DataResponse<VenueSearchResponse>) in
+            Alamofire.request(requestUrl, method: .get, parameters: parameters, encoding: URLEncoding.queryString, headers: nil).responseData(completionHandler: { (responseData) in
                 
-                switch response.result {
-                case .success(let data):
-                    let venues = data.response?.venues ?? []
-                    fulfill(venues)
+                switch responseData.result {
+                case .success(let jsonData):
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.mutableLeaves)
+                        let searchResponse = VenueSearchResponse(JSON: json as! [String : Any])
+                        let venues = searchResponse?.response.venues ?? []
+                        fulfill(venues)
+                        return
+                    } catch {
+                        reject(error)
+                        return
+                    }
                 case .failure(let error):
                     reject(error)
                     return
                 }
-            }
+                
+            })
+                
+                
+                
+//                .responseObject { (response: DataResponse<VenueSearchResponse>) in
+//
+//                switch response.result {
+//                case .success(let data):
+//                    let venues = data.response?.venues ?? []
+//                    fulfill(venues)
+//                case .failure(let error):
+//                    reject(error)
+//                    return
+//                }
+//            }
         }
     }
     

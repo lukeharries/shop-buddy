@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,17 +45,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="7yl-wr-Mqh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IGh-QO-RZG"/>
-                    <constraint firstItem="7yl-wr-Mqh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Kc8-x7-AXl"/>
+                    <constraint firstItem="7yl-wr-Mqh" firstAttribute="left" secondItem="H2p-sc-9uM" secondAttribute="left" constant="16" id="Kc8-x7-AXl"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7yl-wr-Mqh" secondAttribute="bottom" constant="8" id="QXk-N6-OOn"/>
                     <constraint firstItem="4RA-FG-8yz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="WrF-7I-lHS"/>
                     <constraint firstItem="4RA-FG-8yz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b4w-y7-4Zq"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4RA-FG-8yz" secondAttribute="trailing" constant="16" id="baj-Rv-sGt"/>
+                    <constraint firstAttribute="right" secondItem="4RA-FG-8yz" secondAttribute="right" constant="24" id="baj-Rv-sGt"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4RA-FG-8yz" secondAttribute="bottom" constant="8" id="dEH-1b-yhZ"/>
                     <constraint firstItem="7yl-wr-Mqh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nxx-uE-85E"/>
                     <constraint firstItem="4RA-FG-8yz" firstAttribute="leading" secondItem="oV5-nC-3pJ" secondAttribute="trailing" constant="16" id="xDd-fp-KqO"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="iconContainerView" destination="7yl-wr-Mqh" id="c35-ms-LTu"/>
                 <outlet property="iconImageView" destination="oV5-nC-3pJ" id="mRG-3F-aaW"/>

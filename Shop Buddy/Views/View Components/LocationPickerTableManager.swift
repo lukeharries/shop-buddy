@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
+import PromiseKit
 
 class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +18,12 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
     init(tableView: UITableView) {
         self.tableView = tableView
         
+        let frame = CGRect(x: 0, y: 0, width: 10, height: 10)
+        self.activityIndicator = NVActivityIndicatorView(frame: frame,
+                                                         type: .ballGridBeat,
+                                                         color: UIColor.white.withAlphaComponent(0.4),
+                                                         padding: nil)
+        
         super.init()
         
         self.tableView.delegate = self
@@ -23,17 +31,47 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.tableFooterView?.isHidden = true
         self.tableView.register(nibs: [LocationPickerCell.cellId])
+        self.tableView.addSubview(refreshControl)
+      
 
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(LocationPickerTableManager.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.isHidden = true
+        return refreshControl
+    }()
+    
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
+        refreshControl.endRefreshing()
+        _ = reloadLocationData()
     }
     
     var venues : [FoursquareVenue] = [FoursquareVenue]()
     
+    var activityIndicator : NVActivityIndicatorView
     
     
-    
-    func reloadLocationData() {
-        PlacesService.shared.requestListOfPossibleLocations(withRetryAttempts: 3).then { (venues) -> Void in
+    func reloadLocationData() -> Promise<Void> {
+        
+        tableView.addSubview(self.activityIndicator)
+        self.activityIndicator.snp.makeConstraints { (make) in
+            make.width.equalTo(44)
+            make.height.equalTo(44)
+            make.center.equalToSuperview()
+        }
+        
+        self.activityIndicator.startAnimating()
+        
+        
+        return PlacesService.shared.requestListOfPossibleLocations(withRetryAttempts: 3).then { (venues) -> Void in
             DispatchQueue.main.async{
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.removeFromSuperview()
+                
                 self.venues = venues
                 self.tableView.reloadData()
             }

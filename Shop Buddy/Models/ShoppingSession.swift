@@ -15,7 +15,8 @@ class ShoppingSession : JSONCodable {
     var sessionId: UUID
     var sessionDate : Date?
     var location : FoursquareVenue?
-    
+    fileprivate var _items : [ShoppingItem] = [ShoppingItem]()
+
     var isUserSpecifiedLocation : Bool = false
     
     init() {
@@ -34,19 +35,21 @@ class ShoppingSession : JSONCodable {
         sessionDate = try decoder.decode("sessionDate", transformer: JSONTransformers.StringToDate)
         location = try decoder.decode("location")
         isUserSpecifiedLocation = try decoder.decode("isUserSpecifiedLocation")
+        _items = try decoder.decode("_items")
+
     }
     
     func toJSON() throws -> Any {
         return try JSONEncoder.create({ (encoder) -> Void in
             try encoder.encode(isUserSpecifiedLocation, key: "isUserSpecifiedLocation")
             try encoder.encode(location, key: "location")
+            try encoder.encode(_items, key: "_items")
             try encoder.encode(sessionDate, key: "sessionDate", transformer: JSONTransformers.StringToDate)
             try encoder.encode(sessionId, key: "sessionId", transformer: JSONTransformerStringToUUID)
         })
     }
     
     
-    fileprivate var _items : [ShoppingItem] = [ShoppingItem]()
     var items : [ShoppingItem] {
         return _items.reversed()
     }

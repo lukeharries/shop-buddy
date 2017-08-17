@@ -15,11 +15,12 @@ class VenueSearchResponse: Mappable {
     
     // Mappable
     required init?(map: Map){
+        mapping(map: map)
     }
     
     func mapping(map: Map) {
         meta <- map["meta"]
-        response <- map["v"]
+        response <- map["response"]
     }
 }
 
@@ -28,6 +29,7 @@ class Meta : Mappable {
     var requestId : String!
     
     required init?(map: Map){
+        mapping(map: map)
     }
     
     func mapping(map: Map) {
@@ -40,6 +42,7 @@ class VenueListResponse : Mappable {
     var venues : [FoursquareVenue]?
     
     required init?(map: Map){
+        mapping(map: map)
     }
     
     func mapping(map: Map) {

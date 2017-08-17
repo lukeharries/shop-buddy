@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import NVActivityIndicatorView
 
 class BuddyListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemViewControllerDelegate, GADBannerViewDelegate, GADInterstitialDelegate {
     

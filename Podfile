@@ -8,6 +8,7 @@ target 'Shop Buddy' do
   pod 'PromiseKit', '~> 4.2.2'
   pod 'SnapKit', '~> 3.2.0'
   pod 'FontAwesome.swift'
+  pod 'NVActivityIndicatorView'
   
   # Substitute for Swift 4 Codable
   pod 'AlamofireObjectMapper', '~> 4.0'
