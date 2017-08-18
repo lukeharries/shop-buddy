@@ -16,7 +16,7 @@ open class InAppPurchaseService: NSObject {
     
     static let shared = InAppPurchaseService()
 
-    
+    static let productsRetrieved = NSNotification.Name(rawValue: "IAPHelperProductsRetrieved")
     static let purchaseNotification = NSNotification.Name(rawValue: "IAPHelperPurchaseNotification")
     
     var retrievedProducts : [InAppPurchaseProduct] = [InAppPurchaseProduct]()
@@ -36,6 +36,8 @@ open class InAppPurchaseService: NSObject {
         super.init()
         SKPaymentQueue.default().add(self)
         
+        setupProductRequestCompletionHandler()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(InAppPurchaseService.appBecameReachable(notification:)), name: BuddySettings.networkBecameReachableNotification, object: nil)
         
         for productIdentifier in productIdentifiers {
@@ -48,20 +50,14 @@ open class InAppPurchaseService: NSObject {
         requestAndUpdateProductsIfNeeded()
     }
     
-    @objc func appBecameReachable(notification: Notification) {
-        requestAndUpdateProductsIfNeeded()
-    }
     
-    public func requestAndUpdateProductsIfNeeded() {
-        if self.retrievedProducts.count > 0 {
-            return
-        }
-        
-        self.requestProducts { (success, products) in
-            self.retrievedProducts.removeAll()
+    func setupProductRequestCompletionHandler() {
+        self.productsRequestCompletionHandler = { (success, products) in
             guard let confirmedProducts = products else {
                 return
             }
+            
+            self.retrievedProducts.removeAll()
             
             for product in confirmedProducts {
                 var headline = ""
@@ -75,13 +71,29 @@ open class InAppPurchaseService: NSObject {
                 appProduct.purchased = self.isProductPurchased(product.productIdentifier)
                 self.retrievedProducts.append(appProduct)
             }
+            
+            NotificationCenter.default.post(name: InAppPurchaseService.productsRetrieved, object: nil)
         }
+    }
+    
+    
+    @objc func appBecameReachable(notification: Notification) {
+        requestAndUpdateProductsIfNeeded()
+    }
+    
+    public func requestAndUpdateProductsIfNeeded() {
+        if self.retrievedProducts.count > 0 {
+            return
+        }
+        
+        guard productsRequestCompletionHandler != nil else { return }
+        
+        self.requestProducts(completionHandler: productsRequestCompletionHandler!)
     }
     
     
     public func requestProducts(completionHandler: @escaping ProductsRequestCompletionHandler) {
         productsRequest?.cancel()
-        productsRequestCompletionHandler = completionHandler
         
         productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
         productsRequest!.delegate = self
@@ -116,7 +128,7 @@ extension InAppPurchaseService: SKProductsRequestDelegate {
         print("Loaded list of products...")
         let products = response.products
         productsRequestCompletionHandler?(true, products)
-        clearRequestAndHandler()
+        clearRequest()
         
         for p in products {
             print("Found product: \(p.productIdentifier) \(p.localizedTitle) \(p.price.floatValue)")
@@ -127,12 +139,11 @@ extension InAppPurchaseService: SKProductsRequestDelegate {
         print("Failed to load list of products.")
         print("Error: \(error.localizedDescription)")
         productsRequestCompletionHandler?(false, nil)
-        clearRequestAndHandler()
+        clearRequest()
     }
     
-    private func clearRequestAndHandler() {
+    private func clearRequest() {
         productsRequest = nil
-        productsRequestCompletionHandler = nil
     }
 }
 

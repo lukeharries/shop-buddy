@@ -33,6 +33,10 @@ class HistoryListViewController: UITableViewController {
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.tableFooterView?.isHidden = true
         tableView.reloadData()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 56
+        
         showMessageIfTableIsEmpty()
     }
     

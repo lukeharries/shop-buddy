@@ -30,7 +30,7 @@ class ColourPickerTableViewCell: UITableViewCell {
             
             let itemView = UIView()
             
-            let circleView = ColourSelectionView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+            let circleView = ColourSelectionView(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
             circleView.selectionColour = colour
             circleView.tag = themeOptionIndex
             circleView.setSelected(isSelected: themeOption == UIColor.theme, animated: false)
@@ -43,7 +43,7 @@ class ColourPickerTableViewCell: UITableViewCell {
                 make.height.equalToSuperview()
                 make.width.equalTo(circleView.snp.height)
             })
-            
+                        
             let button = UIButton(type: .custom)
             button.setTitle(nil, for: .normal)
             button.tag = themeOptionIndex
@@ -58,6 +58,10 @@ class ColourPickerTableViewCell: UITableViewCell {
         
         colourButtonStackView.setNeedsLayout()
         colourButtonStackView.layoutIfNeeded()
+        
+        for circle in circles {
+            circle.updateAppearance()
+        }
     }
     
     @objc func didSelectButton(_ button: UIButton) {

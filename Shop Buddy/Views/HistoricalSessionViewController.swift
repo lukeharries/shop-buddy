@@ -51,6 +51,9 @@ class HistoricalSessionViewController: UIViewController, UITableViewDelegate, UI
         self.tableView.tableFooterView?.isHidden = true
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, toolbar.frame.height, 0)
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 56
+        
         tableView.reloadData()
     }
     

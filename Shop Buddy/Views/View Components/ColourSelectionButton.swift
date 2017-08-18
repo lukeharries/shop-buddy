@@ -68,7 +68,7 @@ class ColourSelectionView: UIView {
         }
     }
     
-    fileprivate func updateAppearance() {
+    func updateAppearance() {
         let size = self.bounds.size
         let smallestDimension = min(size.height, size.width)
         let radius = (smallestDimension / 2.0) - 4.0

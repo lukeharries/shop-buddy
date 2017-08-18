@@ -31,6 +31,10 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.tableFooterView?.isHidden = true
         self.tableView.register(nibs: [LocationPickerCell.cellId])
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 56
+        
         self.tableView.addSubview(refreshControl)
       
 

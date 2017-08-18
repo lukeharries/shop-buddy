@@ -29,7 +29,13 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         title = "About Shop Buddy"
         setupInAppPurchases()
         setupTableView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(AboutViewController.didUpdateInAppPurchaseProducts(notification:)), name: InAppPurchaseService.productsRetrieved, object: nil)
 
+    }
+    
+    func didUpdateInAppPurchaseProducts(notification: Notification) {
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +45,8 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func setupTableView() {
         tableView.register(nibs: [ContactInfoTableViewCell.cellId, ColourPickerTableViewCell.cellId, InAppPurchaseDescriptionCell.cellId, InAppPurchaseActionCell.cellId])
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 56
         tableView.reloadData()
     }
     

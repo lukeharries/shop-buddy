@@ -211,6 +211,10 @@ class BuddyListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.tableView.tableFooterView?.isHidden = true
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 56
+        
         tableView.reloadData()
         showMessageIfTableIsEmpty()
     }
