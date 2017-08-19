@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FontAwesome_swift
 import StoreKit
+import Whisper
 
 enum AboutSections : Int {
     case themeConfig = 0
@@ -31,8 +32,27 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         setupTableView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AboutViewController.didUpdateInAppPurchaseProducts(notification:)), name: InAppPurchaseService.productsRetrieved, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AboutViewController.purchaseFailed(notification:)), name: InAppPurchaseService.purchaseFailedNotification, object: nil)
+        
+
+        
+        
 
     }
+    
+    
+    @objc func purchaseFailed(notification: Notification) {
+        let message = Message(title: "Your in-app purchase could not be completed.", backgroundColor: UIColor.errorRed)
+        // Show and hide a message after delay
+        guard let navigationController = self.navigationController else { return }
+        Whisper.show(whisper: message, to: navigationController, action: .present)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+            Whisper.hide(whisperFrom: navigationController)
+        })
+
+    }
+    
     
     func didUpdateInAppPurchaseProducts(notification: Notification) {
         tableView.reloadData()

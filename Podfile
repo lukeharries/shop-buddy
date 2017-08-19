@@ -9,6 +9,7 @@ target 'Shop Buddy' do
   pod 'SnapKit', '~> 3.2.0'
   pod 'FontAwesome.swift'
   pod 'NVActivityIndicatorView'
+  pod 'Whisper'
   
   # Substitute for Swift 4 Codable
   pod 'AlamofireObjectMapper', '~> 4.0'

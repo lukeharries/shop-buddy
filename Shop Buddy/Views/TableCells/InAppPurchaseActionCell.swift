@@ -19,14 +19,19 @@ class InAppPurchaseActionCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
     
+    
     weak var delegate : InAppPurchaseActionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
         NotificationCenter.default.addObserver(self, selector: #selector(InAppPurchaseActionCell.didUpdateColour(notification:)), name: BuddySettings.colourChangedNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(InAppPurchaseActionCell.didPurchaseProduct(notification:)), name: InAppPurchaseService.purchaseNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(InAppPurchaseActionCell.purchaseDidFail(notification:)), name: InAppPurchaseService.purchaseFailedNotification, object: nil)
+        
     }
     
     
@@ -38,9 +43,12 @@ class InAppPurchaseActionCell: UITableViewCell {
         
         if InAppPurchaseService.canMakePayments() {
             actionButton.setTitle(product.priceString, for: .normal)
+            defaultButtonLabel = product.priceString
             actionButton.isEnabled = true
         } else {
             actionButton.setTitle("Not Available", for: .normal)
+            defaultButtonLabel = "Not Available"
+
             actionButton.isEnabled = false
         }
         
@@ -56,16 +64,23 @@ class InAppPurchaseActionCell: UITableViewCell {
         }
     }
     
+    @objc func purchaseDidFail(notification: Notification) {
+        actionButton.isEnabled = true
+        actionButton.setTitle(defaultButtonLabel, for: .normal)
+    }
+    
+    var defaultButtonLabel : String!
+    
     func configure(title: String, buttonLabel: String, delegate: InAppPurchaseActionCellDelegate?, hideButton: Bool = false) {
         titleLabel.text = title
+        defaultButtonLabel = buttonLabel
         actionButton.setTitle(buttonLabel, for: .normal)
         self.delegate = delegate
         
         actionButton.isHidden = hideButton
     }
 
-    @objc
-    func didUpdateColour(notification: Notification) {
+    @objc func didUpdateColour(notification: Notification) {
         styleButton()
     }
     
@@ -88,8 +103,9 @@ class InAppPurchaseActionCell: UITableViewCell {
 
     
     @IBAction func didTapButton(_ sender: Any) {
-        delegate?.inAppPurchaseActionCell(self, didTapActionButton: true)
         actionButton.isEnabled = false
+        actionButton.setTitle("Processing", for: .normal)
+        delegate?.inAppPurchaseActionCell(self, didTapActionButton: true)
     }
     
 }

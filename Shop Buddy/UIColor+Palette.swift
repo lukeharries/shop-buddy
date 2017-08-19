@@ -22,6 +22,8 @@ enum ThemeOption : Int {
 
 extension UIColor {
     
+    static let errorRed = UIColor(red:0.682353, green:0.047059, blue:0.000000, alpha:1.0)
+    
     static let buddyBlue = UIColor(red:0.345098, green:0.494118, blue:1.000000, alpha:1.0)
     static let buddyRed = UIColor(red:0.749020, green:0.141176, blue:0.007843, alpha:1.0)
     static let buddyOrange = UIColor(red:0.682353, green:0.403922, blue:0.000000, alpha:1.0)

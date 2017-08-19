@@ -18,6 +18,7 @@ open class InAppPurchaseService: NSObject {
 
     static let productsRetrieved = NSNotification.Name(rawValue: "IAPHelperProductsRetrieved")
     static let purchaseNotification = NSNotification.Name(rawValue: "IAPHelperPurchaseNotification")
+    static let purchaseFailedNotification = NSNotification.Name(rawValue: "IAPHelperPurchaseFailedNotification")
     
     var retrievedProducts : [InAppPurchaseProduct] = [InAppPurchaseProduct]()
 
@@ -150,6 +151,21 @@ extension InAppPurchaseService: SKProductsRequestDelegate {
 
 extension InAppPurchaseService: SKPaymentTransactionObserver {
     
+    
+    public func checkIfProductIsDeferred(identifier: String?) -> Bool {
+        if SKPaymentQueue.default().transactions.count > 0 {
+            for transaction in SKPaymentQueue.default().transactions {
+                if (identifier ?? "") == transaction.payment.productIdentifier {
+                    if transaction.transactionState == .deferred || transaction.transactionState == .failed {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
+    
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             switch (transaction.transactionState) {
@@ -186,6 +202,8 @@ extension InAppPurchaseService: SKPaymentTransactionObserver {
     
     private func fail(transaction: SKPaymentTransaction) {
         print("fail...")
+        deliverPurchaseFailureNotification()
+        
         if let transactionError = transaction.error as NSError? {
             if transactionError.code != SKError.paymentCancelled.rawValue {
                 print("Transaction Error: \(transaction.error?.localizedDescription)")
@@ -202,6 +220,10 @@ extension InAppPurchaseService: SKPaymentTransactionObserver {
         UserDefaults.standard.set(true, forKey: identifier)
         UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: InAppPurchaseService.purchaseNotification, object: identifier)
+    }
+    
+    private func deliverPurchaseFailureNotification() {
+        NotificationCenter.default.post(name: InAppPurchaseService.purchaseFailedNotification, object: nil)
     }
 }
 

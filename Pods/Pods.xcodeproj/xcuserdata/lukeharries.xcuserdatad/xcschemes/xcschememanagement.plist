@@ -79,6 +79,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Whisper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>094A194E022B7DC71286BB635EBEAEB7</key>
+		<key>0BACFC91B521A7435621162A4E299BF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FC4A1AE6E428D6EBB49BCA5E99C7737</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>65857DCDBD1728294BF7F121A2221FA2</key>
+		<key>61C1ECA5983CD0585B05C50FF361F411</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6991F49AED797519343B1F4591001691</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7294FBD9DFE6672C7A42E3EC220F8FC8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B37C937057AF7A61BB8CF9DCED4571B7</key>
+		<key>BD8274F4B509C5224F573691B4AA6473</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -158,6 +163,11 @@
 			<true/>
 		</dict>
 		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC5868B6396177073EA9463AD2B1C881</key>
 		<dict>
 			<key>primary</key>
 			<true/>
