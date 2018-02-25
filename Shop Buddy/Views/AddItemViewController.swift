@@ -70,6 +70,9 @@ class AddItemViewController : UIViewController, UITextFieldDelegate, BarcodeScan
         quantityTextField.keyboardType = .decimalPad
         quantityTextField.delegate = self
         quantityTextField.baseColour = UIColor.accent
+        
+        quantityTextField.text = StringParser.numberToStringFormatter.string(from: NSNumber(value: 1.0))
+        
 
         itemNameTextField.textFieldStyle = .standard
         itemNameTextField.keyboardType = .default

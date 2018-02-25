@@ -11,6 +11,7 @@ import Firebase
 import GoogleMobileAds
 import Fabric
 import Crashlytics
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         ShoppingSessionService.shared.restoreCurrentSession()
         PlacesService.shared.authorizeLocation()
+        
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            PlacesService.shared.updateLocation()
+        }
+        
         _ = InAppPurchaseService.shared
         
         return true

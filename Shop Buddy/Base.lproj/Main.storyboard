@@ -34,7 +34,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$999.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-bc-p1A">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$999.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-bc-p1A">
                                                 <rect key="frame" x="0.0" y="24" width="375" height="84"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,8 +53,26 @@
                                             <constraint firstAttribute="trailing" secondItem="CXZ-yC-1aa" secondAttribute="trailing" id="wrQ-Ru-eGY"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owT-2e-UVV">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$888.97 excluding 8.32% tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8F-hI-Nlh">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="H8F-hI-Nlh" firstAttribute="top" secondItem="owT-2e-UVV" secondAttribute="top" id="FKM-9U-AFh"/>
+                                            <constraint firstAttribute="bottom" secondItem="H8F-hI-Nlh" secondAttribute="bottom" id="Wck-dg-AUa"/>
+                                            <constraint firstAttribute="trailing" secondItem="H8F-hI-Nlh" secondAttribute="trailing" id="hNq-1W-6DW"/>
+                                            <constraint firstItem="H8F-hI-Nlh" firstAttribute="leading" secondItem="owT-2e-UVV" secondAttribute="leading" id="tSN-jT-IOP"/>
+                                        </constraints>
+                                    </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKF-2T-Ziv">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="58"/>
+                                        <rect key="frame" x="0.0" y="180" width="375" height="58"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-mE-WKO">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
@@ -93,7 +111,7 @@
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRG-89-e0s">
-                                        <rect key="frame" x="0.0" y="174" width="375" height="124.5"/>
+                                        <rect key="frame" x="0.0" y="238" width="375" height="124.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-x1-Wrv">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
@@ -139,7 +157,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgI-jk-Jsp">
-                                        <rect key="frame" x="0.0" y="298.5" width="375" height="82"/>
+                                        <rect key="frame" x="0.0" y="362.5" width="375" height="82"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3J3-2H-QGJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
@@ -196,7 +214,7 @@
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-gO-6ob">
-                                        <rect key="frame" x="0.0" y="380.5" width="375" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="444.5" width="375" height="56.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgQ-He-ycV">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
@@ -222,7 +240,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DqG-KE-iwh">
-                                        <rect key="frame" x="0.0" y="437" width="375" height="114"/>
+                                        <rect key="frame" x="0.0" y="501" width="375" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShoppingItemCell" id="81k-ym-p7o" customClass="ShoppingItemCell" customModule="Shop_Buddy" customModuleProvider="target">
@@ -344,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOR-Ky-pcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162.4000000000001" y="-401.64917541229386"/>
+            <point key="canvasLocation" x="-1814" y="-99"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="fVZ-Bp-b6B">
@@ -509,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgN-6p-KTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1162" y="393"/>
+            <point key="canvasLocation" x="-991" y="101"/>
         </scene>
         <!--History-->
         <scene sceneID="s3g-zA-HPu">
@@ -609,7 +627,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g78-Uy-eDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-63" y="-825"/>
+            <point key="canvasLocation" x="-991" y="-563"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="dqQ-Im-uVw">
@@ -805,7 +823,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AW6-j5-8zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2206" y="-400"/>
+            <point key="canvasLocation" x="-2524" y="-98"/>
         </scene>
     </scenes>
     <resources>

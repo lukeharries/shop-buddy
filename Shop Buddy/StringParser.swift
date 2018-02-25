@@ -15,17 +15,35 @@ enum StringParserError : Error {
 
 class StringParser {
     
+    static var numberFormatter : NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.locale = NSLocale.current
+        formatter.generatesDecimalNumbers = true
+        formatter.currencyDecimalSeparator = NSLocale.current.decimalSeparator
+        return formatter
+    }
+    
+    
+    static var numberToStringFormatter : NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.locale = NSLocale.current
+        formatter.generatesDecimalNumbers = true
+        formatter.currencyDecimalSeparator = NSLocale.current.decimalSeparator
+        formatter.alwaysShowsDecimalSeparator = true
+        formatter.minimumFractionDigits = 2
+        return formatter
+    }
     
     static func getPriceInCents(fromString string: String?) throws -> Int {
         guard let nonNilString = string, !nonNilString.isEmpty else {
             throw StringParserError.invalidPriceString
         }
         
-        guard let double = NumberFormatter().number(from: nonNilString)?.doubleValue else {
+        guard let decimalNumber = numberFormatter.number(from: nonNilString)?.decimalValue else {
             throw StringParserError.invalidPriceString
         }
         
-        let decimal = NSDecimalNumber(value: double)
+        let decimal = decimalNumber as NSDecimalNumber
         let centsDecimal = decimal.multiplying(byPowerOf10: 2)
         let centsInt = centsDecimal.intValue
         return centsInt
@@ -36,14 +54,14 @@ class StringParser {
             throw StringParserError.invalidUnitsString
         }
         
-        guard let double = NumberFormatter().number(from: nonNilString)?.doubleValue else {
+        guard let double = numberFormatter.number(from: nonNilString)?.doubleValue else {
             throw StringParserError.invalidUnitsString
         }
         
         return double
     }
     
-    
+
     
     static func validatePriceString(_ string: String?) -> Bool {
         do {

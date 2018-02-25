@@ -35,8 +35,7 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 56
         
-        self.tableView.addSubview(refreshControl)
-      
+        self.tableView.refreshControl = refreshControl
 
     }
     
@@ -45,7 +44,6 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
         refreshControl.addTarget(self, action:
             #selector(LocationPickerTableManager.handleRefresh(_:)),
                                  for: UIControlEvents.valueChanged)
-        refreshControl.isHidden = true
         return refreshControl
     }()
     
@@ -60,6 +58,7 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
     
     
     func reloadLocationData() -> Promise<Void> {
+        PlacesService.shared.updateLocation()
         
         tableView.addSubview(self.activityIndicator)
         self.activityIndicator.snp.makeConstraints { (make) in
@@ -71,15 +70,29 @@ class LocationPickerTableManager: NSObject, UITableViewDelegate, UITableViewData
         self.activityIndicator.startAnimating()
         
         
-        return PlacesService.shared.requestListOfPossibleLocations(withRetryAttempts: 3).then { (venues) -> Void in
-            DispatchQueue.main.async{
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.removeFromSuperview()
-                
-                self.venues = venues
-                self.tableView.reloadData()
+        return Promise<Void> { fulfill, reject in
+            let requestListTask = DispatchWorkItem {
+                PlacesService.shared.requestListOfPossibleLocations(withRetryAttempts: 3).then { (venues) -> Void in
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.removeFromSuperview()
+                    
+                    self.venues = venues
+                    self.tableView.reloadData()
+                    fulfill()
+                }.catch(execute: { (error) in
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.removeFromSuperview()
+                    
+                    self.tableView.reloadData()
+                    fulfill()
+                })
             }
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: requestListTask)
         }
+        
+        
+
     }
     
     

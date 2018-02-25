@@ -34,7 +34,8 @@ class ShoppingItemCell: UITableViewCell {
         itemNameLabel.text = item.product.name
         itemTotalLabel.text = CurrencyHelper.shared.format(priceInCents: item.totalPriceCents)
         
-        qtyLabel.text = String(format: "%.2f x", item.units)
+        let units = StringParser.numberToStringFormatter.string(from: NSNumber(value: item.units))!
+        qtyLabel.text = String(format: "%@ x", units)
         unitPriceLabel.text = CurrencyHelper.shared.format(priceInCents: item.unitPriceCents)
     }
 

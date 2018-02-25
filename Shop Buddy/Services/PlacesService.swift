@@ -39,6 +39,10 @@ class PlacesService : NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
     override init() {
         super.init()
         locationManager.delegate = self
@@ -107,9 +111,11 @@ class PlacesService : NSObject, CLLocationManagerDelegate {
             return Promise<[FoursquareVenue]>(error: PlacesServiceError.noLocation)
         }
         
-        guard venueListSearch == nil else {
+        guard venueListSearch == nil || venueListSearch?.isResolved == true else {
             return venueListSearch!
         }
+        
+        venueListSearch = nil
         
         guard let location = currentLocation else {
             if retryAttempts > 0 {
@@ -129,5 +135,9 @@ class PlacesService : NSObject, CLLocationManagerDelegate {
         return venueListSearch!
     }
     
+    
+    func updateLocation() {
+        self.locationManager.requestLocation()
+    }
     
 }
